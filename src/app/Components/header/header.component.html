@@ -1,0 +1,39 @@
+<div class="container my-5">
+  <div>
+    <h2 class="mb-3">Users</h2>
+    <div>
+      <table class="table ctable">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col"> </th>
+          </tr>
+        </thead>
+        <tbody  *ngFor="let thing of some">
+          <tr>
+            <td>{{thing.id}}</td>
+            <td>{{thing.firstName}}</td>
+            <td>{{thing.lastName}}</td>
+            <td><button  class="btn btn-outline-info" [routerLink]="['/user','view', thing.id]">view</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="card col-sm-4 my-5" style="width: 24rem;" *ngFor="let thing of some">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{thing.firstName}} {{thing.lastName}}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a class="btn btn-primary" [routerLink]="['/user','view', thing.id]">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div> -->
